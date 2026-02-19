@@ -1,0 +1,13 @@
+The Raspberry Pi has the I2C communication channel disabled by default. You must enable it manually:
+
+Run the configuration tool:
+
+Bash
+sudo raspi-config
+Navigate to Interface Options using the arrow keys.
+
+Select I2C.
+
+Select Yes when asked if you want to enable the interface.
+
+Select Finish to exit and save changes.
