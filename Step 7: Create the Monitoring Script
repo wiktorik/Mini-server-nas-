@@ -1,0 +1,30 @@
+Run: nano nas_monitor.py
+Paste the following code:
+import board
+import adafruit_ssd1306
+import adafruit_sht31d
+from PIL import Image, ImageDraw, ImageFont
+import time
+
+# Initialize I2C (Pins 3 & 5)
+i2c = board.I2C()
+sensor = adafruit_sht31d.SHT31D(i2c)
+oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c)
+
+while True:
+    oled.fill(0)
+    image = Image.new("1", (128, 64))
+    draw = ImageDraw.Draw(image)
+    
+    # Reading data
+    t = sensor.temperature
+    h = sensor.relative_humidity
+    
+    # Drawing UI
+    draw.text((0, 0), "NAS SERVER: ONLINE", fill=255)
+    draw.text((0, 25), f"Temp: {t:.1f} C", fill=255)
+    draw.text((0, 45), f"Hum:  {h:.1f} %", fill=255)
+    
+    oled.image(image)
+    oled.show()
+    time.sleep(5)
