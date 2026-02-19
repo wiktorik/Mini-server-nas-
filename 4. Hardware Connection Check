@@ -1,0 +1,10 @@
+
+Connect your components to the Raspberry Pi GPIO header as follows:
+
+VCC (OLED & SHT3x) -> Pin 1 (3.3V)
+
+GND (OLED & SHT3x) -> Pin 6 (Ground)
+
+SDA (OLED & SHT3x) -> Pin 3 (GPIO 2)
+
+SCL (OLED & SHT3x) -> Pin 5 (GPIO 3)
