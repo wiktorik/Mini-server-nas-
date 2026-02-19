@@ -1,0 +1,8 @@
+Run this command to see if the Pi "sees" your devices:
+sudo i2cdetect -y 1
+Should pop up
+Check the output table:
+
+3c: This is your OLED display.
+
+44 (or 45): This is your SHT3x sensor.
