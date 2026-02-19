@@ -1,0 +1,5 @@
+Run: crontab -e
+
+Add this line at the very bottom:
+
+@reboot python3 /home/pi/nas_monitor.py &
