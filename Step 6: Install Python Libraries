@@ -1,0 +1,4 @@
+# Install Adafruit libraries for SSD1306 and SHT31
+pip3 install adafruit-circuitpython-ssd1306 adafruit-circuitpython-sht31d
+# Install Pillow for drawing graphics/text
+pip3 install Pillow
